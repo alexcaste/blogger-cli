@@ -1,0 +1,11 @@
+<div class=form>
+<form>
+  <label for="title">Title</label>
+    {{input id="title" class="form-control" value=title}}
+  <label for="author">Author</label>
+    {{input id="author" class="form-control" value=author}}
+    <label for="body">Body</label>
+      {{textarea id="body" class="form-control" value=body}}
+  <button class="btn btn-primary" {{action 'save'}}>Add</button>
+</form>
+</div>

@@ -27,14 +27,42 @@ var posts = [
     title: 'Boats',
     author: 1,
     date: new Date(2105,5,4,6,0,0),
-    body: 'Gotta have them'
+    body: 'Gotta have them',
+    comments: [1]
   },
   {
     id: 2,
     title: 'Hoes',
     author: 2,
     date: new Date(2104,11,4,6,0,0),
-    body: 'Gotta *have* them too'
+    body: 'Gotta *have* them too',
+    comments: [2]
+  }
+];
+
+var authors = [
+  {
+    id: 1,
+    name: "Dale Doback",
+    posts: [1]
+  },
+  {
+    id: 2,
+    name: "Brennan Huff",
+    posts: [2]
+  }
+];
+
+var comments = [
+  {
+    id: 1,
+    text: 'wooot',
+    post: 1
+  },
+  {
+    id: 2,
+    text: 'meow',
+    post: 2
   }
 ];
 
@@ -46,16 +74,9 @@ module.exports = function(app) {
     res.send({
       'posts': posts,
 
-      "authors": [{
-        id: 1,
-        name: "Dale Doback",
-        posts: [1]
-      },
-      {
-        id: 2,
-        name: "Brennan Huff",
-        posts: [2]
-      }]
+      "authors": authors,
+
+      "comments": comments
     });
   });
 

@@ -13,3 +13,14 @@
 <div class="body">
   {{ body}}
 </div>
+
+
+{{#each comment in model.comment}}
+  <p>
+    {{comment.text}}
+  </p>
+{{/each}}
+
+<p>{{#link-to 'new-comment' this.id class="btn btn-success"}}New Comment{{/link-to}}</p>
+
+{{outlet}}
