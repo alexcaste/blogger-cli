@@ -5,11 +5,9 @@ var NewPostController = {
     save: function() {
       var newPost = this.store.createRecord('post', {
         title: this.get('title'),
-        author: this.get('author'),
 
         body: this.get('body')
       });
-
       newPost.save();
       this.transitionToRoute('posts');
     }

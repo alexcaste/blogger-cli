@@ -7,5 +7,5 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   body: attr('string'),
   date: attr('date'),
-  comment: DS.hasMany('comment')
+  comments: DS.hasMany('comment')
 });
